@@ -107,3 +107,19 @@ instance : Priceable Donut where
         | Flavor.strawberry => 2
     let sprinklePrice := if donut.sprinkles then 1 else 0
     flavorPrice + sprinklePrice
+
+/-
+  This is a comment of
+  multiple lines
+-/
+
+-- This is a comment of a single line
+
+def main : IO Unit :=
+  do
+    IO.println ("Exemplo CoffeePrice 1: " ++ toString (coffeePrice Coffee.espresso))
+    IO.println ("Exemplo CoffeePrice 2: " ++ toString (coffeePrice2 Coffee.latte))
+    IO.println ("Exemplo CoffeePrice 3: " ++ toString  (Coffee.price Coffee.mocha))
+    IO.println ("Exemplo ListaLength (nil): " ++ toString (listLength Lista.nil))
+    IO.println ("Exemplo ListLength (3 elementos): " ++ toString (listLength threeElementsList))
+    IO.println ("Exemplo PrintList (3 elementos): " ++ toString (printList threeElementsList))
